@@ -1,0 +1,54 @@
+[
+  {
+    "depth": "0",
+    "parentTable": "/DMO/FLIGHT",
+    "childTable": "/DMO/CONNECTION",
+    "childTableAlias": "CONNECTION",
+    "relationKeys": [
+      {
+        "parentKey": "CARRIER_ID",
+        "childKey": "CARRIER_ID"
+      },
+      {
+        "parentKey": "CONNECTION_ID",
+        "childKey": "CONNECTION_ID"
+      }
+    ]
+  },
+  {
+    "depth": "1",
+    "parentTable": "/DMO/CONNECTION",
+    "childTable": "/DMO/AIRPORT",
+    "childTableAlias": "FromAirport",
+    "relationKeys": [
+      {
+        "parentKey": "AIRPORT_FROM_ID",
+        "childKey": "AIRPORT_ID"
+      }
+    ]
+  },
+  {
+    "depth": "1",
+    "parentTable": "/DMO/CONNECTION",
+    "childTable": "/DMO/AIRPORT",
+    "childTableAlias": "ToAirport",
+    "relationKeys": [
+      {
+        "parentKey": "AIRPORT_TO_ID",
+        "childKey": "AIRPORT_ID"
+      }
+    ]
+  },
+  {
+    "depth": "1",
+    "parentTable": "/DMO/CONNECTION",
+    "childTable": "/DMO/CARRIER",
+    "childTableAlias": "Carrier",
+    "relationKeys": [
+      {
+        "parentKey": "CARRIER_ID",
+        "childKey": "CARRIER_ID"
+      }
+    ]
+  }
+]
